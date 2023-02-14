@@ -1,3 +1,5 @@
+#Source:https://github.com/deepmind/mathematics_dataset
+
 # Copyright 2018 DeepMind Technologies Limited.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,7 +32,11 @@ import six
 from six.moves import range
 from six.moves import zip
 import sympy
-from sympy.solvers.diophantine import base_solution_linear as diophantine_solve_linear_2d
+
+#the line below gave an error the fix (which is the line after) was given in a GitHub forum at:
+#https://github.com/deepmind/mathematics_dataset/issues/14
+#from sympy.solvers.diophantine import base_solution_linear as diophantine_solve_linear_2d
+from sympy.solvers.diophantine.diophantine import base_solution_linear as diophantine_solve_linear_2d
 
 
 def expanded_coefficient_counts(length, is_zero):
